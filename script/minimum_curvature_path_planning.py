@@ -51,7 +51,7 @@ def main():
     normal_y = outer[:,1] - inner[:,1]
 
     # ==================== Quadratic matrices ====================
-    n = len(normal_x) - 1000 # number of segments
+    n = len(normal_x) # number of segments
     H = cs.DM.zeros(n,n)
     B = cs.DM.zeros(n)
 
