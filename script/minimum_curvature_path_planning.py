@@ -17,7 +17,7 @@ def fnc_interparc(data, arclength, ds):
 
 def main():
     # ==================== Read Track Data ====================
-    data = np.loadtxt('./paths/Silverstone.csv', skiprows=1, delimiter=',')
+    data = np.loadtxt('./paths/Catalunya.csv', skiprows=1, delimiter=',')
     
     x = data[:,0] # center line x [m]
     y = data[:,1] # center line y [m]
