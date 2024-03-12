@@ -79,8 +79,10 @@ def main():
         B[i+1]  = B[i+1] + 2*(inner[i+1,0] + inner[i-1,0] - 2*inner[i,0])*normal_x[i+1] + 2*(inner[i+1,1] + inner[i-1,1] - 2*inner[i,1])*normal_y[i+1]
 
     # ==================== Constraints ====================
-    lb = cs.DM.zeros(n) + 1/12
-    ub = cs.DM.ones(n) - 1/12
+    # lb = cs.DM.zeros(n) + 1/12
+    # ub = cs.DM.ones(n) - 1/12
+    lb = cs.DM.zeros(n)
+    ub = cs.DM.ones(n)
 
     Aeq = cs.DM.zeros(1,n)
     Aeq[0] = 1
