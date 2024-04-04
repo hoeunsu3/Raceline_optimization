@@ -25,11 +25,12 @@ def main():
     twl = data[:,3] # track width left [m]
 
     # ==================== Interpolate same distance ====================
+    ds = 1
     arclength = fnc_arclength(data[:,:2])
-    x_interp = fnc_interparc(x, arclength, ds=5) # ds = segment length [m]
-    y_interp = fnc_interparc(y, arclength, ds=5)
-    twr_interp = fnc_interparc(twr, arclength, ds=5)
-    twl_interp = fnc_interparc(twl, arclength, ds=5)
+    x_interp = fnc_interparc(x, arclength, ds=ds) # ds = segment length [m]
+    y_interp = fnc_interparc(y, arclength, ds=ds)
+    twr_interp = fnc_interparc(twr, arclength, ds=ds)
+    twl_interp = fnc_interparc(twl, arclength, ds=ds)
     
     # ==================== Inner, outer track ====================
     inner = np.zeros((len(x_interp)-1, 2))
